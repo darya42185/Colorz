@@ -95,7 +95,7 @@ body {
 /*Square with 3D*/
 .screen-wrapper {
   margin-top: 150px;
-  margin-left: 20%;
+  margin-left: 35%;
   width: 30%;
   height: 50%;
   background-color: rgba(247, 241, 241, 0.5);
@@ -118,17 +118,13 @@ body {
 }
 
 .rotate img{
+  position: absolute;
   height: 100%;
-}
-
-.rotate video {
-  height: 100%;
-  transform: rotateY(180deg);
+  width: 100%;
 }
 
 .rotate img,
 .rotate video {
-  width: 100%;
   background-size: cover;
   backface-visibility: hidden;
   position: absolute;
@@ -139,3 +135,15 @@ body {
   right: 0;
 }
 
+.rotate video{
+  height: 100%;
+  width: 100%;
+  transform: rotateY(180deg);
+  object-fit: cover
+  /* position: absolute; */
+}
+
+.lala {
+  width: 50%;
+  height: 50%;
+}
