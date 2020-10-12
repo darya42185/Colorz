@@ -1,0 +1,150 @@
+/*Burger button*/
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.section {
+  height: 100vh;
+  background-color: #8ddaee;
+  display: flex;
+  justify-content: start;
+  align-self: center;
+}
+
+.menu-btn {
+  display: block;
+  width: 10%;
+  height: 10%;
+  background-color: transparent;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.btn-burger,
+.btn-burger::before,
+.btn-burger::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  margin-top: -1px;
+  margin-left: -20px; 
+  height: 2px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+.btn-burger::before,
+.btn-burger::after {
+  content: '';
+  display: block;
+}
+
+.btn-burger::before {
+  transform: translateY(-10px);
+  width: 30px;
+}
+
+.btn-burger::after {
+  transform: translateY(10px);
+  width: 20px;
+}
+
+.menu-btn:hover {
+  background-color: rgb(226, 58, 190);
+  width: 12%;
+  height: 12%;
+  transition: 0.5s;
+}
+
+.menu-btn:hover .btn-burger {
+  width: 20px;
+}
+
+.menu-btn:hover .btn-burger::before {
+  margin-left: -10px; 
+  width: 40px;
+}
+
+.menu-btn:hover .btn-burger::after {
+  margin-left: -10px; 
+  width: 30px;
+}
+
+.menu-btn.menu-btn_active .btn-burger {
+  background-color: transparent;
+}
+
+
+.menu-btn.menu-btn_active .btn-burger::before{
+  transform: rotate(45deg);
+  width: 40px;
+}
+
+.menu-btn.menu-btn_active .btn-burger::after{
+  transform: rotate(-45deg);
+  width: 40px;
+}
+
+.menu-btn.menu-btn_active::before:hover,  
+.menu-btn.menu-btn_active::after:hover{
+  width: 40px;
+  margin-left: -0px; 
+}
+/*Square with 3D*/
+.screen-wrapper {
+  margin-top: 150px;
+  margin-left: 35%;
+  width: 30%;
+  height: 50%;
+  background-color: rgba(247, 241, 241, 0.5);
+}
+
+.rotate.rotate_active {
+  transform: rotateY(180deg);
+}
+
+.rotate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+  perspective: 1000px;
+  transition: 1s;
+  height: 100%;
+  cursor: pointer;
+}
+
+.rotate img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.rotate img,
+.rotate video {
+  background-size: cover;
+  backface-visibility: hidden;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.rotate video{
+  height: 100%;
+  width: 100%;
+  transform: rotateY(180deg);
+  object-fit: cover
+  /* position: absolute; */
+}
+
+.lala {
+  width: 50%;
+  height: 50%;
+}

@@ -7,9 +7,14 @@ body {
 .section {
   height: 100vh;
   background-color: #8ddaee;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: start;
-  align-self: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .menu-btn {
@@ -18,7 +23,8 @@ body {
   height: 10%;
   background-color: transparent;
   position: absolute;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .btn-burger,
@@ -29,9 +35,10 @@ body {
   left: 50%;
   width: 40px;
   margin-top: -1px;
-  margin-left: -20px; 
+  margin-left: -20px;
   height: 2px;
   background-color: #fff;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -42,19 +49,22 @@ body {
 }
 
 .btn-burger::before {
-  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
   width: 30px;
 }
 
 .btn-burger::after {
-  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
   width: 20px;
 }
 
 .menu-btn:hover {
-  background-color: rgb(226, 58, 190);
+  background-color: #e23abe;
   width: 12%;
   height: 12%;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -63,12 +73,12 @@ body {
 }
 
 .menu-btn:hover .btn-burger::before {
-  margin-left: -10px; 
+  margin-left: -10px;
   width: 40px;
 }
 
 .menu-btn:hover .btn-burger::after {
-  margin-left: -10px; 
+  margin-left: -10px;
   width: 30px;
 }
 
@@ -76,22 +86,24 @@ body {
   background-color: transparent;
 }
 
-
-.menu-btn.menu-btn_active .btn-burger::before{
-  transform: rotate(45deg);
+.menu-btn.menu-btn_active .btn-burger::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   width: 40px;
 }
 
-.menu-btn.menu-btn_active .btn-burger::after{
-  transform: rotate(-45deg);
+.menu-btn.menu-btn_active .btn-burger::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   width: 40px;
 }
 
-.menu-btn.menu-btn_active::before:hover,  
-.menu-btn.menu-btn_active::after:hover{
+.menu-btn.menu-btn_active::before:hover,
+.menu-btn.menu-btn_active::after:hover {
   width: 40px;
-  margin-left: -0px; 
+  margin-left: -0px;
 }
+
 /*Square with 3D*/
 .screen-wrapper {
   margin-top: 150px;
@@ -102,22 +114,33 @@ body {
 }
 
 .rotate.rotate_active {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .rotate {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   transform-style: preserve-3d;
   position: relative;
-  perspective: 1000px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transition: 1s;
   transition: 1s;
   height: 100%;
   cursor: pointer;
 }
 
-.rotate img{
+.rotate img {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -126,7 +149,8 @@ body {
 .rotate img,
 .rotate video {
   background-size: cover;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   position: absolute;
   margin: auto;
   left: 0;
@@ -135,15 +159,17 @@ body {
   right: 0;
 }
 
-.rotate video{
+.rotate video {
   height: 100%;
   width: 100%;
-  transform: rotateY(180deg);
-  object-fit: cover
-  /* position: absolute; */
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .lala {
   width: 50%;
   height: 50%;
 }
+/*# sourceMappingURL=index.css.map */
